@@ -6,6 +6,7 @@ function ListGroup() {
 
   return (
     <>
+      {/* List Group Task */}
       <h1>Lists</h1>
       {items.length === 0 && <p>No items in the list</p>}
       <ul className="list-group">
