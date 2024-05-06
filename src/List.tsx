@@ -1,16 +1,20 @@
 import { useState } from "react";
 
-function CountryList() {
-  let Countries = ["New York", "San Fransisco", "Egypt"];
+interface Props {
+  items: string[];
+  heading: string;
+}
+
+function CountryList({ items, heading }: Props) {
   const [selectedIndex, setSelectedIndex] = useState(-1);
 
   return (
     <>
-      <h1>Lists</h1>
-      {Countries.length === 0 && <p>No items found.</p>}
+      <h1>{heading}</h1>
+      {items.length === 0 && <p>No items found.</p>}
 
       <ul className="list-group">
-        {Countries.map((country, index) => (
+        {items.map((country, index) => (
           <li
             key={country}
             className={

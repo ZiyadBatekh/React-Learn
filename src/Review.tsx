@@ -60,3 +60,12 @@ function ListGroup() {
 // )
 
 // .........................................................................................................
+
+// What is a Hook ?
+//ans: A hook is a function that allows us to tab into builted features in react.
+
+// useState()       it takes an array [the first index 0 , the second index 1]
+// the first index 0 => variable (selectedIndex).
+// the second index 1 => updater function (setSelectedIndex).
+
+// Note: Each component have its own state. if you call the same function each component will have its own state.
