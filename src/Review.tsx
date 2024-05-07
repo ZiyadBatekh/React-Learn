@@ -69,3 +69,5 @@ function ListGroup() {
 // the second index 1 => updater function (setSelectedIndex).
 
 // Note: Each component have its own state. if you call the same function each component will have its own state.
+
+//..................................................................................................................
