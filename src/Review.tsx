@@ -61,6 +61,8 @@ function ListGroup() {
 
 // .........................................................................................................
 
+// useSate Hook              useState imagine it as *ngIf in Angular.
+
 // What is a Hook ?
 //ans: A hook is a function that allows us to tab into builted features in react.
 
