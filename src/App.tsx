@@ -1,11 +1,11 @@
-import Alert from "./components/Alert";
+import Button from "./components/Button";
 
 function App() {
   return (
     <div>
-      <Alert>
-        Hello world <span>I'm Ziyad</span>
-      </Alert>
+      <Button color="warning" onClick={() => console.log("Clicked")}>
+        Mona Elmoghazi
+      </Button>
     </div>
   );
 }
