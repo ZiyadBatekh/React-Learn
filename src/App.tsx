@@ -1,12 +1,12 @@
-import { useState } from "react";
-import Button from "./components/Button/Button";
-
+import Like from "./components/Like/Like";
+import React from "react";
 
 function App() {
-  const [alertVisible, setAlertVisibility] = useState(false);
-  return (
-    <Button></Button>
-  );
+  return(
+    <div>
+      <Like onClick={()=>console.log("Clicked")}></Like>
+    </div>
+  )
 }
 
 export default App;
