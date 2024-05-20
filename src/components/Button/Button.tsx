@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import styles from "./Styles/Button.module.css";
+import styles from "./Button.module.css";
 
 const button = () => {
   return (
