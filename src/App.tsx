@@ -1,17 +1,12 @@
-import { useState } from "react";
-import Alert from "./components/Alert";
-import Button from "./components/Button";
+import Like from "./components/Like/Like";
+import React from "react";
 
 function App() {
-  const [alertVisible, setAlertVisibility] = useState(false);
-  return (
+  return(
     <div>
-      {alertVisible && (
-        <Alert onClose={() => setAlertVisibility(false)}>My Alert</Alert>
-      )}
-      <Button onClick={() => setAlertVisibility(true)}>My Button</Button>
+      <Like onClick={()=>console.log("Clicked")}></Like>
     </div>
-  );
+  )
 }
 
 export default App;
