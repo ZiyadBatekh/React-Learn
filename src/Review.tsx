@@ -73,3 +73,8 @@ function ListGroup() {
 // Note: Each component have its own state. if you call the same function each component will have its own state.
 
 //..................................................................................................................
+
+// When using the state hook : 
+// 1- group related variables inside an object.
+// 2- avoid using complex object.
+
