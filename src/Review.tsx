@@ -78,3 +78,27 @@ function ListGroup() {
 // 1- group related variables inside an object.
 // 2- avoid using complex object.
 
+// ..............................................................................
+
+// What is the difference between pure and impure ? 
+
+// Pure Function : when you give the same input it always returns the same result 
+// Impure : The oposite of pure given the same input and it returns different outputs.
+
+// To keep the component pure you should keep changes out of the render phase
+// Means that if you make a counter it should be outside of the function component.
+
+/* EX: 
+  let count = 0 
+  count++
+
+  const Message = () =>{
+    // if you make the count++ here inside the component the output will be different when you render the <Message /> 3 times in app.jsx
+    return <div>Message {count} </div>
+  }
+
+  export defult Message;
+
+  */
+// .......................................................................................
+
