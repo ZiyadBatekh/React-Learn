@@ -102,3 +102,16 @@ function ListGroup() {
   */
 // .......................................................................................
 
+/* when dealing with state variables you should group related variables inside an object 
+ Ex: const [drink , setDrink] = useState({
+    title:"Amirican",
+    price:5
+  })
+
+and to update that object you should give React a new state object so: 
+const handleClick = () =>{
+     setDrink({...drink , price:6})
+  }
+
+here we updated the price to be 6.
+*/
