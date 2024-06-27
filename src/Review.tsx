@@ -102,6 +102,7 @@ function ListGroup() {
   */
 // .......................................................................................
 
+// How to Update Objects in React ? We will use here state hook as an example.
 /* when dealing with state variables you should group related variables inside an object 
  Ex: const [drink , setDrink] = useState({
     title:"Amirican",
@@ -115,3 +116,31 @@ const handleClick = () =>{
 
 here we updated the price to be 6.
 */
+
+// ..................................................................................
+
+// How to update nested objects ? Look at the example below:
+
+/* const [customer, setCustomer] = useState({
+    name: "John",
+    address: {
+      city: "New York",
+      zipCode: 12345,
+    },
+  });
+
+  const handleClick = () => {
+  // here we will copy all the customer obj then we make a new obj for the address to refer to a different ref in memory so these obj are not the same.
+    setCustomer({
+      ...customer,
+      address: { ...customer.address, zipCode: 2222222222222222 },   // We spred the address from customer then change the zip code
+    });
+  };
+  return (
+    <div>
+      {customer.address.zipCode}
+      <button className="btn btn-primary" onClick={handleClick}>
+        Click Me
+      </button>
+    </div>
+  );
