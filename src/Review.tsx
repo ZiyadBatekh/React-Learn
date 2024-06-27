@@ -143,4 +143,24 @@ here we updated the price to be 6.
         Click Me
       </button>
     </div>
-  );
+  ); */
+
+  //....................................................................................................
+
+  // Updating an array.
+
+  /*
+  const [tags, setTags] = useState(["Happy, Sad"])
+
+  const handleClick = () => {
+    // Add item
+     setTags([...tags , "Exciting"]);
+     
+    // Removing Item
+    setTags(tags.filter(tag => tag !== "happy"))
+
+    // update an existing element
+    setTags(tags.map(tag => tag="happy" ? "Happines" : tag));
+     
+  };
+  */
