@@ -73,3 +73,94 @@ function ListGroup() {
 // Note: Each component have its own state. if you call the same function each component will have its own state.
 
 //..................................................................................................................
+
+// When using the state hook : 
+// 1- group related variables inside an object.
+// 2- avoid using complex object.
+
+// ..............................................................................
+
+// What is the difference between pure and impure ? 
+
+// Pure Function : when you give the same input it always returns the same result 
+// Impure : The oposite of pure given the same input and it returns different outputs.
+
+// To keep the component pure you should keep changes out of the render phase
+// Means that if you make a counter it should be outside of the function component.
+
+/* EX: 
+  let count = 0 
+  count++
+
+  const Message = () =>{
+    // if you make the count++ here inside the component the output will be different when you render the <Message /> 3 times in app.jsx
+    return <div>Message {count} </div>
+  }
+
+  export defult Message;
+
+  */
+// .......................................................................................
+
+// How to Update Objects in React ? We will use here state hook as an example.
+/* when dealing with state variables you should group related variables inside an object 
+ Ex: const [drink , setDrink] = useState({
+    title:"Amirican",
+    price:5
+  })
+
+and to update that object you should give React a new state object so: 
+const handleClick = () =>{
+     setDrink({...drink , price:6})
+  }
+
+here we updated the price to be 6.
+*/
+
+// ..................................................................................
+
+// How to update nested objects ? Look at the example below:
+
+/* const [customer, setCustomer] = useState({
+    name: "John",
+    address: {
+      city: "New York",
+      zipCode: 12345,
+    },
+  });
+
+  const handleClick = () => {
+  // here we will copy all the customer obj then we make a new obj for the address to refer to a different ref in memory so these obj are not the same.
+    setCustomer({
+      ...customer,
+      address: { ...customer.address, zipCode: 2222222222222222 },   // We spred the address from customer then change the zip code
+    });
+  };
+  return (
+    <div>
+      {customer.address.zipCode}
+      <button className="btn btn-primary" onClick={handleClick}>
+        Click Me
+      </button>
+    </div>
+  ); */
+
+  //....................................................................................................
+
+  // Updating an array.
+
+  /*
+  const [tags, setTags] = useState(["Happy, Sad"])
+
+  const handleClick = () => {
+    // Add item
+     setTags([...tags , "Exciting"]);
+     
+    // Removing Item
+    setTags(tags.filter(tag => tag !== "happy"))
+
+    // update an existing element
+    setTags(tags.map(tag => tag="happy" ? "Happines" : tag));
+     
+  };
+  */
