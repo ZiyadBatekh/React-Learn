@@ -5,22 +5,20 @@ import Cart from "./components/Cart";
 
 function App() {
 
-const [game, setGame]= useState({
-  id: 1,
-  player:{
-    name:"John"
-  }
+const [pizza, setPizza]= useState({
+  name: "Spicy pepperoni",
+  toppings: ["Mushrom, "]
 })
 
 const handleClick = () => {
-  setGame({
-    ...game , player:{...game.player , name:"Ziyad"}
+  setPizza({
+   ...pizza , toppings:[...pizza.toppings , "Cheese"]
   })
 }
 
   return (
     <div>
-     <p> {game.player.name}</p>
+     <p> {pizza.toppings}</p>
      <button onClick={handleClick}>click me</button>
     </div>
   );
